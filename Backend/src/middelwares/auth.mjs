@@ -1,27 +1,30 @@
 import jwt from "jsonwebtoken";
+const secret = process.env.SECRET;
 
 const generateToken = (payload) => {
-  return jwt.sign(payload, "secret", { expiresIn: "7d" });
+  return jwt.sign(payload, secret, { expiresIn: "7d" });
 };
 
 const verifyToken = (req, res, next) => {
-  const token = req.headers["Authorization"];
+  const authHeader = req.headers.authorization;
 
-  if (!token) {
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return res.status(401).json({ message: "Token not exist" });
   }
 
+  const token = authHeader.split(" ")[1]; // Extraer el token después de "Bearer"
+
   try {
     // Verificar el token y obtener la información del usuario
-    const decoded = jwt.verify(token, "secret"); // Reemplaza 'secreto' con tu clave secreta
+    const payload = jwt.verify(token, secret);
 
-    // Adjuntar la información del usuario al objeto de solicitud para que esté disponible en las rutas protegidas
-    req.user = decoded;
-
+    if (payload.role !== "admin") {
+      // Si no tiene el rol de administrador, redirigir al usuario a la página de productos
+      return res.redirect("/products");
+    }
     // Llamar a next() para pasar al siguiente middleware o ruta
     next();
   } catch (error) {
-    console.log(token);
     // Si hay un error en la verificación del token, devolver un mensaje de error
     return res.status(403).json({ message: error });
   }
