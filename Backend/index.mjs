@@ -1,9 +1,6 @@
 import express from "express";
-// import { statusDb } from "./db.mjs";
 import router from "./src/routes/index.mjs";
-import { startServer } from "./testDb.mjs";
-
-startServer();
+import db from "./testDb.mjs";
 
 const app = express();
 
@@ -12,6 +9,14 @@ app.use(express.json());
 const PORT = 3001;
 app.use(router);
 
-app.listen(PORT, () => {
-  console.log(`server listen in port ${PORT}`);
-});
+db.sequelize
+  .sync({ alter: true }) // Utiliza { force: true } solo en desarrollo si quieres recrear tablas
+  .then(() => {
+    console.log("Base de datos sincronizada correctamente");
+    app.listen(PORT, () => {
+      console.log(`Servidor escuchando en el puerto ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error("Error al sincronizar la base de datos:", error);
+  });

@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 
 export default (sequelize) => {
-  sequelize.define("Brand", {
+  const Brand = sequelize.define("Brand", {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
@@ -16,4 +16,6 @@ export default (sequelize) => {
       allowNull: false,
     },
   });
+
+  return Brand;
 };

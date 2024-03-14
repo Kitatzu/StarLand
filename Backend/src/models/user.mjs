@@ -1,31 +1,22 @@
 import { DataTypes } from "sequelize";
 
 export default (sequelize) => {
-  const Product = sequelize.define("Product", {
+  const User = sequelize.define("User", {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
-    description: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    img: {
-      type: DataTypes.STRING,
-    },
-    price: {
-      type: DataTypes.DOUBLE,
-      allowNull: false,
-      validate: {
-        min: 1.0,
-      },
     },
   });
 
-  return Product;
+  return User;
 };

@@ -1,10 +1,29 @@
 import express from "express";
+import {
+  getAllProducts,
+  getForId,
+  addProduct,
+  deleteProduct,
+  editProduct,
+} from "../controllers/productController.mjs";
+
+import { addBrands, getBrands } from "../controllers/brandController.mjs";
 
 const router = express.Router();
 
-router.get("/products");
-router.post("/products");
-router.put("/products");
+//Routes products
+router.get("/products", getAllProducts);
+router.get("/products/:id", getForId);
+router.post("/products", addProduct);
+router.put("/products/:id", editProduct);
+router.delete("/products/:id", deleteProduct);
+
+//Brands
+router.get("/brands", getBrands);
+router.post("/brands", addBrands);
+
+//Routes users
+router.post("/users");
 
 router.use((req, res) => {
   res.status(400).send("Resource not found, invalid route");
