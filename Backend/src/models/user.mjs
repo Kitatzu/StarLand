@@ -16,6 +16,10 @@ export default (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    role: {
+      type: DataTypes.STRING,
+      defaultValue: "user",
+    },
   });
 
   return User;

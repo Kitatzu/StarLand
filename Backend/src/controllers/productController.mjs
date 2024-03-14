@@ -17,7 +17,7 @@ async function getForId(req, res) {
   try {
     const product = await Product.findByPk(id, { includes: Brand });
     if (!product) {
-      res.status(400).json({ message: "Product not found" });
+      return res.status(400).json({ message: "Product not found" });
     }
     res.status(200).json(product);
   } catch (error) {
@@ -54,7 +54,7 @@ async function editProduct(req, res) {
   try {
     const find = await Product.findByPk(id);
     if (!find) {
-      res.status(400).json({ message: "Product not found for id" });
+      return res.status(400).json({ message: "Product not found for id" });
     }
 
     await find.update(updateFields);
@@ -72,7 +72,7 @@ async function deleteProduct(req, res) {
   try {
     const find = await Product.findByPk(id);
     if (!find) {
-      res.status(400).json({ message: "Product not found for id" });
+      return res.status(400).json({ message: "Product not found for id" });
     }
 
     await find.destroy();
