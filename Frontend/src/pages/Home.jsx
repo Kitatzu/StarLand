@@ -1,7 +1,9 @@
+import css from "../css/Home.module.css";
+
 export const Home = () => {
   return (
-    <div>
-      <h1> Home </h1>
+    <div className={css.home_container}>
+      <h1> Hola soy la home</h1>
     </div>
   );
 };
