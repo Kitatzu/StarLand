@@ -1,7 +1,25 @@
 .home_container {
   background-image: url("/astro.webp");
   background-size: cover;
-  filter: brightness(0.5);
   width: 100%;
-  height: 100vh;
+  height: auto;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Esto centrará el título */
+}
+
+.title_container {
+  margin-top: 2rem; /* Ajusta este valor según sea necesario para centrar el título */
+  margin-bottom: 2rem;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }

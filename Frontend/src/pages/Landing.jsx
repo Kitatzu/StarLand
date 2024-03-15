@@ -3,7 +3,7 @@ import css from "../css/Landing.module.css";
 import { useNavigate } from "react-router-dom";
 
 export const Landing = () => {
-  const products = useProductStore((state) => state.products);
+  // const products = useProductStore((state) => state.products);
   const navigate = useNavigate();
 
   const handleClick = () => {

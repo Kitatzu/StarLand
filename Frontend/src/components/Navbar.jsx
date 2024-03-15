@@ -7,8 +7,9 @@ export const Navbar = () => {
     useNav();
 
   const location = useLocation();
+  const validRoutes = ["/", "/home", "/register", "/login", "/admin"];
 
-  if (location.pathname === "/") {
+  if (!validRoutes.includes(location.pathname)) {
     return null;
   }
 

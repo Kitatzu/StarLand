@@ -365,6 +365,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/inter/-/inter-5.0.17.tgz#0881fe41ef536ce95c1661fe46279a764c4d4d0b"
   integrity sha512-sa80nNnqF8kzhBvqusWiL9vlPMVpdmOwMmDBup46Jggsr1VBqo+YuzwB36Ls+X6uHJtb8Yv3ALBHL/zGmT862A==
 
+"@fontsource-variable/roboto-condensed@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-condensed/-/roboto-condensed-5.0.2.tgz#f55c295c57848a32a15e0eee2d7a9cc6398d697a"
+  integrity sha512-MWGCP8uPv51WWxBmlmN+rQp5DKDE2JG6LDICkVFrF46R7WqPPdsezKk9MDp+ndPuRjELPcKvfSCNIe2Hwpl/8w==
+
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"
