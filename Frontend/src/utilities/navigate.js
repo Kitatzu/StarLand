@@ -10,7 +10,6 @@ export const useNav = () => {
 
   compiler.redirectRegister = () => {
     navigate(`/register`);
-    setShouldScrollToVideo(true);
   };
 
   compiler.redirectLogin = () => {

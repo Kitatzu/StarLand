@@ -1,0 +1,76 @@
+.register_container {
+  background-color: #0d0f14;
+  width: 100%;
+  height: calc(100vh - 60px);
+  font-family: "Inter Variable", sans-serif;
+  font-weight: bold;
+}
+
+.register_title {
+  padding-top: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #ffffffa6;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.register_container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form_group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form_input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.toggle_button {
+  font-family: "Inter Variable", sans-serif;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #3c49be;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+.toggle_button:hover {
+  color: #f2f6fa;
+  background-color: #3c49be;
+  transform: scale(1.1); /* Cambio de color al pasar el mouse */
+}
+
+.reg_btn {
+  font-family: "Inter Variable", sans-serif;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #3c49be;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.6s ease;
+}

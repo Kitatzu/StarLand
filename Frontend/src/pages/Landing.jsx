@@ -1,13 +1,12 @@
-import { useProductStore } from "../store/Store";
 import css from "../css/Landing.module.css";
 import { useNavigate } from "react-router-dom";
+import { useUserStore } from "../store/Store";
 
 export const Landing = () => {
-  // const products = useProductStore((state) => state.products);
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/home"); // Navegación dentro de la transición
+    navigate("/home");
   };
 
   return (
