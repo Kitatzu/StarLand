@@ -32,9 +32,11 @@ export const useUserStore = create(
     (set) => {
       return {
         userToken: "",
+        isLogin: false,
         setToken: (token) =>
           set((state) => ({
             userToken: token,
+            isLogin: true,
           })),
       };
     },

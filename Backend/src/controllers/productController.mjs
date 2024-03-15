@@ -4,8 +4,8 @@ const { Product, Brand } = db;
 
 async function getAllProducts(req, res) {
   try {
-    const allProduct = await Product.findAll({ includes: Brand });
-    res.status(200).json({ allProduct });
+    const allProducts = await Product.findAll({ includes: Brand });
+    res.status(200).json({ allProducts });
   } catch (error) {
     res.status(400).json({ message: `Error: ${error}` });
   }
