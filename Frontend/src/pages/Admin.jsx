@@ -2,7 +2,13 @@ import css from "../css/Admin.module.css";
 import { useProductStore } from "../store/Store";
 
 export const Admin = () => {
-  const { products } = useProductStore();
+  const { products, fetchDeleteProduct } = useProductStore();
+
+  const handleDelete = (productId) => {
+    fetchDeleteProduct(productId);
+  };
+
+  const handleEdit = () => {};
 
   return (
     <div className={css.admin_container}>
