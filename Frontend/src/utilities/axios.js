@@ -1,14 +1,15 @@
 import { useUserStore } from "../store/Store";
 import axios from "axios";
+const host = import.meta.env.VITE_HOST;
 
 // Instancia de Axios sin withCredentials
 export const axiosUser = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: host,
 });
 
 // Instancia de Axios con withCredentials
 export const axiosAdmin = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: host,
   withCredentials: true,
 });
 

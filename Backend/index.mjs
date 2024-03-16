@@ -1,11 +1,22 @@
 import express from "express";
 import router from "./src/routes/index.mjs";
 import db from "./testDb.mjs";
+import cors from "cors";
 
 const app = express();
 
 app.disable("x-powered-by");
 app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
+
+app.options("*", (req, res) => {
+  res.sendStatus(200);
+});
 const PORT = 3001;
 app.use(router);
 

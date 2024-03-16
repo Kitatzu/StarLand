@@ -6,8 +6,12 @@ import { ProductDetails } from "../components/ProductDetails";
 import { Register } from "../pages/Register";
 import { Login } from "../pages/Login";
 import { Admin } from "../pages/Admin";
+import { ProtectedRoutes } from "../components/ProtectedRoutes";
+import { useUserStore } from "../store/Store";
 
 export const AppRouter = () => {
+  const { isLogin } = useUserStore();
+
   return (
     <>
       <Routes>
@@ -16,8 +20,12 @@ export const AppRouter = () => {
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
+
         <Route path="*" element={<NotFound />} />
+
+        <Route element={<ProtectedRoutes isLogin={isLogin} />}>
+          <Route path="/admin" element={<Admin />} />
+        </Route>
       </Routes>
     </>
   );
