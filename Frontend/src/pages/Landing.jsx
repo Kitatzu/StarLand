@@ -1,11 +1,11 @@
 import css from "../css/Landing.module.css";
 import { useNavigate } from "react-router-dom";
-import { useUserStore } from "../store/Store";
 
 export const Landing = () => {
   const navigate = useNavigate();
-
+  const host = import.meta.env.VITE_HOST;
   const handleClick = () => {
+    console.log(host);
     navigate("/home");
   };
 
