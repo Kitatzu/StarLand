@@ -1,4 +1,4 @@
-# Challenge Tecnico StoryDots
+# Challenge Técnico StoryDots
 
 Este repositorio contiene el código fuente para el challenge técnico proporcionado por Story Dots, el mismo se basa en un E-Commerce, del cual he elegido la temática de venta de Telescopios (No pregunten solamente paso... )
 
@@ -72,17 +72,44 @@ router.post("/login", login);
 **Backend**
 
 - **Clonar el repositorio:**
+  Clonar el repositorio desde Github o descargarlo en zip, abrirlo con el editor de código de preferencia y cambiar hasta la carpeta **Backend**
 
 ```bash
-    git clone https://github.com/Kitatzu/Challenge-StoryDots-Exequiel.git
+git clone https://github.com/Kitatzu/Challenge-StoryDots-Exequiel.git
 ```
 
 - **Instalar Yarn (Si se lo tiene saltar este paso) y las dependencias:**
 
-```javascript
-    corepack enable
+```bash
+corepack enable
 ```
 
-```yarn
-    yarn
+```bash
+yarn
 ```
+
+- **Agregar variables de entorno**
+
+Crear un archivo .env en la carpeta raíz y agregar estar variables de entorno necesarias para conectar la DB, llenar con su base de datos de preferencia, en este caso particular se usar postgres pero se puede cambiar en el archivo **testDb.mjs**
+
+```
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
+DB_HOST=
+DB_PORT=
+SECRET=
+PORTHOST=
+```
+
+- **Iniciar Proyecto**
+
+Usar el comando yarn dev para iniciar el proyecto en modo desarrollo!!
+
+```bash
+yarn dev
+```
+
+**Frontend**
+
+-- en construcción --
