@@ -7,9 +7,11 @@ Este repositorio contiene el código fuente para el challenge técnico proporcio
 El repositorio está organizado de la siguiente manera:
 
 **Frontend:** Contiene el código fuente del frontend de la aplicación.
+
 **Backend:** Contiene el código fuente del backend de la aplicación.
 
-**Tecnologías Utilizadas**
+
+## Tecnologías Utilizadas
 
 **Frontend:**
 
