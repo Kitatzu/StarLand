@@ -9,7 +9,7 @@ app.disable("x-powered-by");
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "*",
     credentials: true,
   })
 );
@@ -17,7 +17,7 @@ app.use(
 app.options("*", (req, res) => {
   res.sendStatus(200);
 });
-const PORT = 3001;
+const PORT = process.env.PORTHOST || 3001;
 app.use(router);
 
 db.sequelize
