@@ -150,3 +150,18 @@ Usar el comando yarn dev para iniciar el proyecto en modo desarrollo!!
 ```bash
 yarn dev
 ```
+
+## Mejoras a realizar
+
+**Se puede realizar las siguientes mejoras al proyecto:**
+
+- Completar el uso del CRUD de productos desde el Frontend en la pestaña Admin
+- Mejorar estilos generales de la aplicación
+- Mejora de la claridad en la que se presenta la información (Modales de aviso, colores para avisar login correcto o incorrecto, etc).
+
+## Contacto
+
+Por cualquier duda o consulta no dudes en contactarme en los canales que figuran a continuación
+
+- 📧 [Email](exequielmrodriguez@gmail.com)
+- 🌎 [LinkedIn](www.linkedin.com/in/exequielmr)
