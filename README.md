@@ -10,7 +10,6 @@ El repositorio está organizado de la siguiente manera:
 
 **Backend:** Contiene el código fuente del backend de la aplicación.
 
-
 ## Tecnologías Utilizadas
 
 **Frontend:**
@@ -71,13 +70,15 @@ router.post("/login", login);
 
 ## Instrucciones para probar el proyecto de manera Local.
 
-**Backend**
+## Backend
 
 - **Clonar el repositorio:**
-  Clonar el repositorio desde Github o descargarlo en zip, abrirlo con el editor de código de preferencia y cambiar hasta la carpeta **Backend**
+  Clonar el repositorio desde Github o descargarlo en zip, abrirlo con el editor de código de preferencia y cambiar hasta la carpeta **Backend** con el comando cd
 
 ```bash
 git clone https://github.com/Kitatzu/Challenge-StoryDots-Exequiel.git
+
+cd Backend
 ```
 
 - **Instalar Yarn (Si se lo tiene saltar este paso) y las dependencias:**
@@ -92,7 +93,7 @@ yarn
 
 - **Agregar variables de entorno**
 
-Crear un archivo .env en la carpeta raíz y agregar estar variables de entorno necesarias para conectar la DB, llenar con su base de datos de preferencia, en este caso particular se usar postgres pero se puede cambiar en el archivo **testDb.mjs**
+Crear un archivo .env en la carpeta raíz (del Backend) y agregar estar variables de entorno necesarias para conectar la DB, llenar con su base de datos de preferencia, en este caso particular se usa postgres pero se puede cambiar en el archivo **testDb.mjs**
 
 ```
 DB_USER=
@@ -112,6 +113,40 @@ Usar el comando yarn dev para iniciar el proyecto en modo desarrollo!!
 yarn dev
 ```
 
-**Frontend**
+## Frontend
 
--- en construcción --
+- **Clonar el repositorio:**
+  Clonar el repositorio desde Github o descargarlo en zip, abrirlo con el editor de código de preferencia y cambiar hasta la carpeta **Frontend** con el comando cd (Saltar el paso de clonar el repo si ya lo tienen aunque todavía deben moverse a la carpeta Frontend)
+
+```bash
+git clone https://github.com/Kitatzu/Challenge-StoryDots-Exequiel.git
+
+cd Frontend
+```
+
+- **Instalar Yarn (Si se lo tiene saltar este paso) y las dependencias:**
+  Si se habilito **corepack** en el Backend, también en el Frontend, no es necesario realizarlo de nuevo
+
+```bash
+corepack enable
+```
+
+```bash
+yarn
+```
+
+- **Agregar variables de entorno**
+
+Crear un archivo .env en la carpeta raíz (del Frontend) y agregar esta variable de entorno necesaria para agregar la URI a la que se le van a realizar las peticiones desde el Frontend
+
+```
+VITE_HOST=
+```
+
+- **Iniciar Proyecto**
+
+Usar el comando yarn dev para iniciar el proyecto en modo desarrollo!!
+
+```bash
+yarn dev
+```
