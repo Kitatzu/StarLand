@@ -1,5 +1,6 @@
 import css from "../css/Landing.module.css";
 import { useNavigate } from "react-router-dom";
+import Atropos from "atropos/react";
 
 export const Landing = () => {
   const navigate = useNavigate();

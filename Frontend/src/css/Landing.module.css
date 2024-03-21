@@ -68,3 +68,33 @@
   color: #280049;
   font-weight: bold;
 }
+
+@media (width < 800px) {
+  .landing_container {
+    background-color: #280049;
+    background-size: auto;
+  }
+
+  .text_container {
+    padding: 0 1rem 10rem 0;
+  }
+
+  .title_container {
+    transform: translate(-5%, 80%);
+    animation: float 2s infinite alternate ease-in-out;
+  }
+
+  .title_container h1,
+  span {
+    font-size: 1.5rem;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate(-5%, 100%);
+    }
+    100% {
+      transform: translate(-5%, 75%);
+    }
+  }
+}
