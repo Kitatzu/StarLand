@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar carpetas y archivos relacionados con "env"
+**/env*/
+**/*env*

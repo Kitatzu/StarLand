@@ -1,7 +1,6 @@
 .landing_container {
-  background-image: url("/public/Cohete.png"), url("/public/Fuego.png"),
-    url("/public/Nube.png"), url("/public/Estrella.png"),
-    url("/public/Fondo.png");
+  background-image: url("/Cohete.png"), url("/Fuego.png"), url("/Nube.png"),
+    url("/Estrella.png"), url("/Fondo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,6 +24,16 @@
   align-items: center;
   font-family: "Montserrat Variable", sans-serif;
   color: white;
+  animation: float 2s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-20%, 32%);
+  }
+  100% {
+    transform: translate(-20%, 40%);
+  }
 }
 
 .title_container h1 {
@@ -94,7 +103,7 @@
       transform: translate(-5%, 100%);
     }
     100% {
-      transform: translate(-5%, 75%);
+      transform: translate(-5%, 85%);
     }
   }
 }
