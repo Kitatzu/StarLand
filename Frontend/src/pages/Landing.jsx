@@ -1,6 +1,5 @@
 import css from "../css/Landing.module.css";
 import { useNavigate } from "react-router-dom";
-import { useUserStore } from "../store/Store";
 
 export const Landing = () => {
   const navigate = useNavigate();
@@ -11,9 +10,15 @@ export const Landing = () => {
 
   return (
     <div className={css.landing_container}>
-      <div className={css.container}>
-        <h1> ¿Estas listo para un viaje inolvidable? </h1>
-        <button onClick={handleClick}> Despegar 🚀 </button>
+      <div className={css.title_container}>
+        <h1> ¿Estas listo </h1>
+        <span> para despegar?</span>
+        <button onClick={handleClick}> DESPEGUE 🚀 </button>
+      </div>
+      <div className={css.text_container}>
+        <p> ¡Te espera </p>
+        <p> un viaje</p>
+        <p>inolvidable!</p>
       </div>
     </div>
   );
