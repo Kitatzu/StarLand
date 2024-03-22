@@ -6,8 +6,15 @@ export const NotFound = () => {
 
   return (
     <div className={css.container}>
-      <h1> Upsss... creo que nos estrellamos!</h1>
-      <button onClick={redirectHome}> Despegar a INICIO 🚀</button>
+      <div className={css.error_container}>
+        <span> 404</span>
+      </div>
+      <div className={css.btn_container}>
+        <button onClick={redirectHome}> Despegar al INICIO 🚀</button>
+      </div>
+      <div className={css.text_container}>
+        <p>¡Upsss!... Creo que nos Perdimos</p>
+      </div>
     </div>
   );
 };

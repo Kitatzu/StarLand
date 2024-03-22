@@ -1,15 +1,59 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-image: url("/Planeta.png"), url("/Estrella.png"), url("/Fondo.png");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  background-color: #0d0e0f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat Variable", sans-serif;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  color: #f2f6fa;
+.error_container {
+  position: absolute;
+  left: 7rem;
+  transform: rotate(330deg);
+}
+
+.error_container span {
+  color: #b91eb0;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.btn_container {
+}
+
+.btn_container button {
+  background-color: #fffeff;
+  color: #45035a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 9px;
+  font-family: "Montserrat Variable", sans-serif;
+  padding: 0.5rem;
+  transition: 1s all ease;
+  cursor: pointer;
+}
+
+.btn_container button:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: #45035a;
+}
+
+.text_container {
+  width: 13%;
+  position: absolute;
+  right: 8rem;
+  top: 8rem;
+  text-align: center;
+}
+
+.text_container p {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fffeff;
 }
