@@ -10,6 +10,21 @@
   font-family: "Montserrat Variable", sans-serif;
 }
 
+.rocket_container {
+  position: absolute;
+  animation: orbit 10s infinite linear;
+  width: 380px;
+  height: 380px;
+  border-radius: 100%;
+}
+
+.rocket_container img {
+  position: relative;
+  rotate: 320deg;
+  width: 20%;
+  object-fit: cover;
+}
+
 .error_container {
   position: absolute;
   left: 7rem;
@@ -20,9 +35,6 @@
   color: #b91eb0;
   font-size: 5rem;
   font-weight: 900;
-}
-
-.btn_container {
 }
 
 .btn_container button {
@@ -56,4 +68,12 @@
   font-size: 1.2rem;
   font-weight: 900;
   color: #fffeff;
+}
+
+/* Animación Cohete */
+
+@keyframes orbit {
+  100% {
+    transform: rotate(360deg);
+  }
 }

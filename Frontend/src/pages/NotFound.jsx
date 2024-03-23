@@ -6,6 +6,9 @@ export const NotFound = () => {
 
   return (
     <div className={css.container}>
+      <div className={css.rocket_container}>
+        <img src="/rocket.png" alt="rocket" />
+      </div>
       <div className={css.error_container}>
         <span> 404</span>
       </div>
