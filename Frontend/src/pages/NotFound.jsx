@@ -6,6 +6,7 @@ export const NotFound = () => {
 
   return (
     <div className={css.container}>
+      <div className={css.planet}></div>
       <div className={css.rocket_container}>
         <img src="/rocket.png" alt="rocket" />
       </div>
