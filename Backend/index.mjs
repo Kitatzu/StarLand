@@ -14,9 +14,6 @@ app.use(
   })
 );
 
-app.options("*", (req, res) => {
-  res.sendStatus(200);
-});
 const PORT = 3001;
 app.use(router);
 
