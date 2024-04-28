@@ -6,7 +6,7 @@
   "author": "Exequiel Rodriguez <exe922@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node --env-file=.env index.mjs",
+    "start": "node index.mjs",
     "dev": "node --watch --env-file=.env index.mjs"
   },
   "dependencies": {

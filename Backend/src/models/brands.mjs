@@ -10,10 +10,12 @@ export default (sequelize) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     logo_url: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
   });
 
