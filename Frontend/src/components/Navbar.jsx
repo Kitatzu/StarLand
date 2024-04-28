@@ -8,7 +8,9 @@ export const Navbar = () => {
 
   const location = useLocation();
 
-  if (location.pathname !== "/") {
+  const routes = ["/home", "/register", "/login", "/products"];
+
+  if (location.pathname !== "/" && routes.includes(location.pathname)) {
     return (
       <header className={css.header_container}>
         <div className={css.img_container}>
