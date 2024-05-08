@@ -163,5 +163,5 @@ yarn dev
 
 Por cualquier duda o consulta no dudes en contactarme en los canales que figuran a continuación
 
-- 📧 [Email](exequielmrodriguez@gmail.com)
-- 🌎 [LinkedIn](www.linkedin.com/in/exequielmr)
+- 📧 [Email](mailto:exequielmrodriguez@gmail.com)
+- 🌎 [LinkedIn](https://www.linkedin.com/in/exequielmr)
